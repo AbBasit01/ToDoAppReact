@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 
-const AddTaskForm = ({ addTask }) => {
+export default function AddTaskForm({ addTask }){
   const [task, setTask] = useState('');
 
   const handleSubmit = (e) => {
+    console.log("handleSubmit")
     e.preventDefault();
     if (task.trim()) {
       addTask(task);
@@ -26,5 +27,3 @@ const AddTaskForm = ({ addTask }) => {
     </form>
   );
 };
-
-export default AddTaskForm;

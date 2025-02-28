@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TaskList = ({ tasks, deleteTask }) => {
+export default function TaskList({ tasks, deleteTask }){
   return (
     <ul className="list-group">
       {tasks.map((task, index) => (
@@ -13,4 +13,4 @@ const TaskList = ({ tasks, deleteTask }) => {
   );
 };
 
-export default TaskList;
+

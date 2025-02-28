@@ -2,14 +2,14 @@ import React, { useState } from 'react';
 import AddTaskForm from './AddTaskForm';
 import TaskList from './TaskList';
 
-const Home = () => {
+export default function Home(){
   const [tasks, setTasks] = useState([]);
 
-  const addTask = (task) => {
+  function addTask(task){
     setTasks([...tasks, task]);
   };
 
-  const deleteTask = (taskIndex) => {
+  function deleteTask(taskIndex){
     setTasks(tasks.filter((task, index) => index !== taskIndex));
   };
 
@@ -21,5 +21,3 @@ const Home = () => {
     </div>
   );
 };
-
-export default Home;
